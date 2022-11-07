@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>basic animation</title>
+    <style>
+        .parent{
+            background-color: hsla(200, 100%, 20%);
+            height: 400px;
+            width: 400px;
+        }
+
+        .child {
+            background-color: red;
+            height: 50%;
+            width: 50%;
+            transition: transform 1s linear;
+        }
+        .parent:hover .child{
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body>
+<div class="parent" >
+    <div class="child"></div>
+</div>
+</body>
+</html>
