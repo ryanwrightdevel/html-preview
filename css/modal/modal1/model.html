@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal Example</title>
+    <style type="text/css">
+        
+        body{
+            margin: 0px;
+        }
+        
+        .dialog{
+            display: none;
+        }
+
+        .dialog.opened{
+            display: block;
+        }
+
+        .dialog__window{
+            display: inline-block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            tranform: translate(-50%, 50%);
+            background: white;
+            border: 2px solid black;
+            padding: 18px;
+            z-index: 101;
+        }
+
+        .dialog__mask{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: black;
+            opacity: 0.6;
+            overflow: hidden;
+            z-index: 100;
+        }
+
+    </style>
+    <script>
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+
+<button id="buy">Add to Cart</button>
+<div class="dialog" role="dialog" aria-label="dialog_tile">
+    <div class="dialog__window">
+        <div>
+            <h2 id="dialog_title">Dialog Example</h2>
+        </div>
+        <div>
+            <p>Buy our awesome stuff. It's really cool.</p>
+            <button>Close</button>
+            <button>Ok</button>
+        </div>
+    </div>
+    <div class="dialog__mask"></div>
+</div>
+
+<script type="text/javascript" src="modal.js"></script>
+<script type="text/javascript">
+  window.addEventListener('load', function (){
+
+    document.querySelector('#buy').addEventListener('click', openDialog);
+  });
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Map,Set,Element.prototype.matches,Node.prototype.contains"></script>
+
+</body>
+</html>
