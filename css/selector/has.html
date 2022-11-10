@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>has</title>
+  <style>
+
+    div.item:has(span.new){
+      border: 4px solid green;
+    }
+    .item{
+      background: linear-gradient(red, orange);
+      width: 100px;
+      height: 100px;
+      padding:10px;
+    }
+    #container{
+      display: flex;
+      gap: 30px;
+    }
+  </style>
+</head>
+<body>
+<div id = 'container'>
+  <div class='item'>
+    <span>Book</span>
+  </div>
+  <div class='item'>
+    <span class='new'>Chair</span>
+  </div>
+  <div class='item'>
+    <span>Book</span>
+  </div>
+</div>
+</body>
+</html>
