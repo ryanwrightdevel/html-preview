@@ -1,0 +1,32 @@
+.item{
+    //highlight-next-line
+    transform: translateX(50px) scale(var(--scale, 3)) rotate(20deg);
+}
+.small{
+    /** ADD COD HERE **/
+    //highlight-next-line
+    --scale: 2;
+}
+/*======================== DO NOT EDIT BELOW================*/
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(orange,yellow);
+}
+.item{
+    border: 4px solid black;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    margin: 55px;
+    font-size: 2rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    margin: 0px;
+}
